@@ -11,8 +11,28 @@ Func<string?, Result<string>> simpleUsageToLower = (string? parameter) => {
 
 };
 
+Func<string?, Result<MoreUsageToLower>> moreUsageToLower = (string? parameter) => {
 
+    if(RGuard.Is.NullOrEmpty(parameter, out Result<MoreUsageToLower>? error)) {
+        return error;
+    }
+
+
+
+    return new MoreUsageToLower() {
+        Result = parameter.ToLowerInvariant(),
+    };
+
+};
 
 var resToLower = simpleUsageToLower("AddsSATG");
+var resToLowerMore = moreUsageToLower("");
 
 Console.ReadLine();
+
+
+class MoreUsageToLower {
+
+    public required string Result { get; set; }
+
+}
