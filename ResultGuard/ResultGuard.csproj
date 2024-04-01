@@ -1,9 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>MarvinDrude.ResultGuard</PackageId>
+    <Title>MarvinDrude.ResultGuard</Title>
+    <Version>1.0.0</Version>
+    <Authors>Marvin Drude (https://marvindrude.com/)</Authors>
+    <Company>https://marvindrude.com/</Company>
+    <Product>MarvinDrude.ResultGuard</Product>
+    <Description>A small and easy package if you want guarding without throwing all those exceptions, but returning a result in either failed or completed state.</Description>
+    <PackageProjectUrl>https://github.com/MarvinDrude/ResultGuard</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MarvinDrude/ResultGuard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>guard result assert clauses functional </PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

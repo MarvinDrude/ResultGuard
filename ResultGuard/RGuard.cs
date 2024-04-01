@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+namespace ResultGuard;
 
-namespace ResultGuard {
-    internal class RGuard {
+public class RGuard {
+
+    public static RGuard 
+
+    private RGuard() {
+
     }
+
 }
