@@ -15,7 +15,7 @@ public static partial class RGuardExtensions {
 
         if (T.IsZero(argument) || T.IsNegative(argument)) {
 
-            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message));
+            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message ?? $"{parameterName} is zero or negative."));
             return true;
 
         }
@@ -47,7 +47,7 @@ public static partial class RGuardExtensions {
 
         if (T.IsZero(argument)) {
 
-            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message));
+            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message ?? $"{parameterName} is zero."));
             return true;
 
         }
@@ -79,7 +79,7 @@ public static partial class RGuardExtensions {
 
         if (T.IsNegative(argument)) {
 
-            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message));
+            result = Result<E>.FromException(new ArgumentOutOfRangeException(parameterName, message ?? $"{parameterName} is negative."));
             return true;
 
         }
