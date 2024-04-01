@@ -271,4 +271,51 @@ public static partial class RGuardExtensions {
 
     }
 
+    /// <summary>
+    /// Returns true and an <see langword="out"/> result in error state if <paramref name="argument"/> is null or the predicate func returns true.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="E"></typeparam>
+    /// <param name="guard"></param>
+    /// <param name="argument"></param>
+    /// <param name="result"></param>
+    /// <param name="parameterName"></param>
+    /// <param name="message">Optional custom error message.</param>
+    /// <returns>true if the argument is null or the predicate func returns true.</returns>
+    public static async Task<(bool isMatched, Result<E>? result)> NullOrPredicateAsync<T, E>(this RGuard guard,
+        [NotNullWhen(false)] T? argument,
+        Func<T, Task<bool>> predicate,
+        [CallerArgumentExpression(nameof(argument))] string? parameterName = null,
+        string? message = null) {
+
+        if (RGuard.Is.Null(argument, out Result<E>? res, parameterName, message)) {
+
+            return (true, res);
+
+        }
+
+        return await RGuard.Is.PredicateAsync<T, E>(argument, predicate, parameterName, message);
+
+    }
+
+    /// <summary>
+    /// Returns true and an <see langword="out"/> result in error state if <paramref name="argument"/> is null or the predicate func returns true.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="guard"></param>
+    /// <param name="argument"></param>
+    /// <param name="result"></param>
+    /// <param name="parameterName"></param>
+    /// <param name="message">Optional custom error message.</param>
+    /// <returns>true if the argument is null or the predicate func returns true.</returns>
+    public static async Task<(bool isMatched, Result<T>? result)> NullOrPredicateAsync<T>(this RGuard guard,
+        [NotNullWhen(false)] T? argument,
+        Func<T, Task<bool>> predicate,
+        [CallerArgumentExpression(nameof(argument))] string? parameterName = null,
+        string? message = null) {
+
+        return await RGuard.Is.NullOrPredicateAsync<T, T>(argument, predicate, parameterName, message);
+
+    }
+
 }
