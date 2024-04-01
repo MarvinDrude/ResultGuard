@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultGuard", "ResultGuard\ResultGuard.csproj", "{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40900023-18CB-422F-8E9D-C5BCD46D5078}
+	EndGlobalSection
+EndGlobal
