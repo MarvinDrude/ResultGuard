@@ -21,20 +21,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
+	<None Include="Resources\icon.png">
+		<Pack>True</Pack>
+		<PackagePath>\</PackagePath>
+	</None>
     <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Resources\icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 

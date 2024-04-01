@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultGuard", "ResultGuard\ResultGuard.csproj", "{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultGuard.Testing", "ResultGuard.Testing\ResultGuard.Testing.csproj", "{D7A7EB36-5C9C-4433-BEA3-83EABCD0AF94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2708548A-F1F0-40D9-A81B-46A1E5FF19A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A7EB36-5C9C-4433-BEA3-83EABCD0AF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A7EB36-5C9C-4433-BEA3-83EABCD0AF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A7EB36-5C9C-4433-BEA3-83EABCD0AF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A7EB36-5C9C-4433-BEA3-83EABCD0AF94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

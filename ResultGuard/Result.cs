@@ -1,6 +1,4 @@
 ﻿
-using System.Diagnostics.CodeAnalysis;
-
 namespace ResultGuard;
 
 /// <summary>
@@ -9,7 +7,7 @@ namespace ResultGuard;
 /// <para><see langword="null"/> can be handled as valid state</para>
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public readonly struct Result<T> : IEquatable<Result<T>> {
+public sealed class Result<T> : IEquatable<Result<T>> {
 
     private readonly Exception? _Exception;
 
@@ -77,10 +75,11 @@ public readonly struct Result<T> : IEquatable<Result<T>> {
 
     }
 
-    public bool Equals(Result<T> other) {
+    public bool Equals(Result<T>? other) {
         return (
+            other is not null && (
             (other.IsFailed && IsFailed && other.Exception!.GetType() == Exception!.GetType())
-            || (other.IsCompleted && IsCompleted && other._Value != null && other._Value.Equals(_Value)));
+            || (other.IsCompleted && IsCompleted && other._Value != null && other._Value.Equals(_Value))));
     }
 
     public static bool operator ==(Result<T> left, Result<T> right) {
