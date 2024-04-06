@@ -23,6 +23,8 @@ Func<string?, Result<MoreUsageToLower>> moreUsageToLower = (string? parameter) =
 
 };
 
+
+
 var resToLower = simpleUsageToLower("AddsSATG");
 var resToLowerMore = moreUsageToLower("");
 
