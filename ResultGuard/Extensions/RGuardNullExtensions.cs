@@ -170,11 +170,11 @@ public static partial class RGuardExtensions {
     /// <returns>true if the argument is null or an empty enumerable.</returns>
     public static bool NullOrEmpty<T>(this RGuard guard,
         [NotNullWhen(false)] IEnumerable<T>? argument,
-        [MaybeNullWhen(false)] out Result<T> result,
+        [MaybeNullWhen(false)] out Result<IEnumerable<T>> result,
         [CallerArgumentExpression(nameof(argument))] string? parameterName = null,
         string? message = null) {
 
-        return guard.NullOrEmpty<T, T>(argument, out result, parameterName, message);
+        return guard.NullOrEmpty<T, IEnumerable<T>>(argument, out result, parameterName, message);
 
     }
 

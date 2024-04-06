@@ -1,7 +1,7 @@
 ﻿
 using System.Numerics;
 
-namespace ResultGuard.Extensions;
+namespace ResultGuard;
 
 public static partial class RGuardExtensions {
 

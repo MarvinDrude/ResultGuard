@@ -17,8 +17,6 @@ Func<string?, Result<MoreUsageToLower>> moreUsageToLower = (string? parameter) =
         return error;
     }
 
-    ArgumentOutOfRangeException.ThrowIfGreaterThan
-
     return new MoreUsageToLower() {
         Result = parameter.ToLowerInvariant(),
     };
