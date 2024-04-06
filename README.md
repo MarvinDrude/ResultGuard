@@ -74,39 +74,39 @@ Func<string?, Result<string>> simpleUsageToLower = (string? parameter) => {
 ### Null checks
 Is Null
 ```csharp
-RGuard.Is.Null(ob, out Result<bool>? result) //different result type
-RGuard.Is.Null(ob, out var result) //result type same as ob (var -> Result<object>? if ob was object)
+RGuard.Is.Null(ob, out Result<bool>? result); //different result type
+RGuard.Is.Null(ob, out var result); //result type same as ob (var -> Result<object>? if ob was object)
 ```
 Is Null or Empty for strings
 ```csharp
-RGuard.Is.NullOrEmpty(ob, out Result<bool>? result) //different result type
-RGuard.Is.NullOrEmpty(ob, out var result) //result type same as ob (var -> Result<string>? if ob is string)
+RGuard.Is.NullOrEmpty(ob, out Result<bool>? result); //different result type
+RGuard.Is.NullOrEmpty(ob, out var result); //result type same as ob (var -> Result<string>? if ob is string)
 ```
 Is Null or Empty for guids
 ```csharp
-RGuard.Is.NullOrEmpty(ob, out Result<bool>? result) //different result type
-RGuard.Is.NullOrEmpty(ob, out var result) //result type same as ob (var -> Result<Guid>? if ob is guid)
+RGuard.Is.NullOrEmpty(ob, out Result<bool>? result); //different result type
+RGuard.Is.NullOrEmpty(ob, out var result); //result type same as ob (var -> Result<Guid>? if ob is guid)
 ```
 Is Null or Empty for guids
 ```csharp
-RGuard.Is.NullOrEmpty(ob, out Result<bool>? result) //different result type
-RGuard.Is.NullOrEmpty(ob, out var result) //result type same as ob (var -> Result<Guid>? if ob is guid)
+RGuard.Is.NullOrEmpty(ob, out Result<bool>? result); //different result type
+RGuard.Is.NullOrEmpty(ob, out var result); //result type same as ob (var -> Result<Guid>? if ob is guid)
 ```
 Is Null or Empty for enumerations like lists etc.
 ```csharp
-RGuard.Is.NullOrEmpty(ob, out Result<bool>? result) //different result type
-RGuard.Is.NullOrEmpty(ob, out var result) //result type similar as ob (var -> Result<IEnumerable<T>>)
+RGuard.Is.NullOrEmpty(ob, out Result<bool>? result); //different result type
+RGuard.Is.NullOrEmpty(ob, out var result); //result type similar as ob (var -> Result<IEnumerable<T>>)
 ```
 Is Null or Whitespace for strings
 ```csharp
-RGuard.Is.NullOrWhiteSpace(ob, out Result<bool>? result) //different result type
-RGuard.Is.NullOrWhiteSpace(ob, out var result) //result type same as ob
+RGuard.Is.NullOrWhiteSpace(ob, out Result<bool>? result); //different result type
+RGuard.Is.NullOrWhiteSpace(ob, out var result); //result type same as ob
 ```
 Is Null or Predicate is true
 Predicates also have standalone methods without the NullOr
 ```csharp
-RGuard.Is.NullOrPredicate(ob, (o) => ob.IsWrong, out Result<string>? result) //different result type
-RGuard.Is.NullOrPredicate(ob, (o) => ob.IsWrong, out var result) //result type same as ob
+RGuard.Is.NullOrPredicate(ob, (o) => ob.IsWrong, out Result<string>? result); //different result type
+RGuard.Is.NullOrPredicate(ob, (o) => ob.IsWrong, out var result); //result type same as ob
 ```
 Is Null or Async Predicate is true (Async methods cant have out parameters).
 Predicates also have standalone methods without the NullOr
@@ -123,48 +123,48 @@ Predicates also have standalone methods without the NullOr
 ### Number checks
 Is number negative
 ```csharp
-RGuard.Is.Negative(number, out Result<object>? result) //different result type
-RGuard.Is.Negative(number, out var result) //result type same as ob (some number type like long etc)
+RGuard.Is.Negative(number, out Result<object>? result); //different result type
+RGuard.Is.Negative(number, out var result); //result type same as ob (some number type like long etc)
 ```
 Is number zero
 ```csharp
-RGuard.Is.Zero(number, out Result<object>? result) //different result type
-RGuard.Is.Zero(number, out var result) //result type same as ob (some number type like long etc)
+RGuard.Is.Zero(number, out Result<object>? result); //different result type
+RGuard.Is.Zero(number, out var result); //result type same as ob (some number type like long etc)
 ```
 Is number zero or negative
 ```csharp
-RGuard.Is.NegativeOrZero(number, out Result<object>? result) //different result type
-RGuard.Is.NegativeOrZero(number, out var result) //result type same as ob (some number type like long etc)
+RGuard.Is.NegativeOrZero(number, out Result<object>? result); //different result type
+RGuard.Is.NegativeOrZero(number, out var result); //result type same as ob (some number type like long etc)
 ```
 ### Out of range checks
 Inputs must implement IEquatable<T> for NotEqual/Equal, IComparable<T> for Greater/Less etc.
 Input is not equal something else
 ```csharp
-RGuard.Is.NotEqual(a, b, out Result<object>? result) //different result type
-RGuard.Is.NotEqual(a, b, out var result)) //result type same as a/b
+RGuard.Is.NotEqual(a, b, out Result<object>? result); //different result type
+RGuard.Is.NotEqual(a, b, out var result); //result type same as a/b
 ```
 Input is equal to something else
 ```csharp
-RGuard.Is.Equal(a, b, out Result<object>? result) //different result type
-RGuard.Is.Equal(a, b, out var result)) //result type same as a/b
+RGuard.Is.Equal(a, b, out Result<object>? result); //different result type
+RGuard.Is.Equal(a, b, out var result); //result type same as a/b
 ```
 Input is greater than something else
 ```csharp
-RGuard.Is.GreaterThan(a, b, out Result<object>? result) //different result type
-RGuard.Is.GreaterThan(a, b, out var result)) //result type same as a/b
+RGuard.Is.GreaterThan(a, b, out Result<object>? result); //different result type
+RGuard.Is.GreaterThan(a, b, out var result); //result type same as a/b
 ```
 Input is greater than or equal something else
 ```csharp
-RGuard.Is.GreaterThanOrEqual(a, b, out Result<object>? result) //different result type
-RGuard.Is.GreaterThanOrEqual(a, b, out var result)) //result type same as a/b
+RGuard.Is.GreaterThanOrEqual(a, b, out Result<object>? result); //different result type
+RGuard.Is.GreaterThanOrEqual(a, b, out var result); //result type same as a/b
 ```
 Input is less than something else
 ```csharp
-RGuard.Is.LessThan(a, b, out Result<object>? result) //different result type
-RGuard.Is.LessThan(a, b, out var result)) //result type same as a/b
+RGuard.Is.LessThan(a, b, out Result<object>? result); //different result type
+RGuard.Is.LessThan(a, b, out var result); //result type same as a/b
 ```
 Input is less than or equal something else
 ```csharp
-RGuard.Is.LessThanOrEqual(a, b, out Result<object>? result) //different result type
-RGuard.Is.LessThanOrEqual(a, b, out var result)) //result type same as a/b
+RGuard.Is.LessThanOrEqual(a, b, out Result<object>? result); //different result type
+RGuard.Is.LessThanOrEqual(a, b, out var result); //result type same as a/b
 ```
