@@ -2,6 +2,8 @@
 <img src="https://github.com/MarvinDrude/ResultGuard/blob/master/ResultGuard/Resources/icon.png" width="64" height="64">
 A small and easy package if you want guarding without throwing all those exceptions, but returning a result in either failed or later in completed state.
 
+[NuGet](https://www.nuget.org/packages/MarvinDrude.ResultGuard/)
+
 ## Easy to extend
 You can easily write your own extension methods for RGuard like the following (NotNull is not typically something you need to guard against, but for the sake of example):
 ```csharp
