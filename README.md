@@ -1,5 +1,5 @@
 # ResultGuard
-[logo](https://github.com/MarvinDrude/ResultGuard/blob/master/ResultGuard/Resources/icon.png =64x64)
+<img src='[figure/rstudio.png](https://github.com/MarvinDrude/ResultGuard/blob/master/ResultGuard/Resources/icon.png)' width='64'>
 A small and easy package if you want guarding without throwing all those exceptions, but returning a result in either failed or later in completed state.
 
 ## Easy to extend
